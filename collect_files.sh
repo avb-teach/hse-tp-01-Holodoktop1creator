@@ -1,4 +1,5 @@
 #!/bin/bash
 input=$1
 output=$2
-echo "Do something with $input and $output."
+find "$input" -type f -exec cp {} "$output" \;
+echo "Все файлы из $input скопированы в $output"
